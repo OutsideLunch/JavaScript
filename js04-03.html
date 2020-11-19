@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 4-3</title>
+    <script>
+        // 계산기의 사칙연산 함수 만들기
+        // 1번 함수 형태
+        function add1() {
+            var a = 10;
+            var b = 5;
+
+            console.log("두 수의 합은 : " + (a+b));
+        }
+        function sub1() {
+            var a = 10;
+            var b = 5;
+
+            console.log("두 수의 차 : " + (a-b));
+        }
+        function multi() {
+            var a = 10;
+            var b = 5;
+
+            console.log("두 수의 곱은 : " + (a*b));
+        }
+        function div1() {
+            var a = 10;
+            var b = 5;
+
+            console.log("두 수를 나눈 몫 : " + (a/b));
+        }
+
+        console.log("------ 1번 형태의 함수로 실행 시 ------")
+       
+        add1();
+        sub1();
+        multi();
+        div1();
+
+        function add2(a, b) {
+            console.log("두 수의 합은 : " + (a+b));
+        }
+        function sub2(a, b) {
+            console.log("두 수의 차 : " + (a-b));
+        }
+        function multi2(a, b) {
+            console.log("두 수의 곱은 : " + (a*b));
+        }
+        function div2(a, b) {
+            console.log("두 수를 나눈 몫 : " + (a/b));
+        }
+
+        console.log("------ 2번 형태의 함수로 실행 시 ------")
+        
+        add2(10, 5);
+        sub2(10, 5);
+        multi2(10, 5);
+        div2(10, 5);
+
+        function add3() {
+            var a = 10;
+            var b = 5;
+            return a + b;
+        }
+        function sub3() {
+            var a = 10;
+            var b = 5;
+            return a - b;
+        }
+        function multi3() {
+            var a = 10;
+            var b = 5;
+            return a * b;
+        }
+        function div3() {
+            var a = 10;
+            var b = 5;
+            return a / b;
+        }
+        console.log("------ 3번 형태의 함수로 실행 시 ------")
+
+        var add3Result = add3();
+        console.log("두 수의 합 : " + add3Result);
+        var sub3Result = sub3();
+        console.log("두 수의 차 : " + sub3Result);
+        var multi3Result = multi3();
+        console.log("두 수의 곱 : " + multi3Result);
+        var div3Result = div3();
+        console.log("두 수를 나눈 몫 : " + div3Result);
+
+        function add4(a, b) {
+            return a + b;
+        }
+        function sub4(a, b) {
+            return a - b;
+        }
+        function multi4(a, b) {
+            return a * b;
+        }
+        function div4(a, b) {
+            return a / b;
+        }
+
+        console.log("------ 4번 형태의 함수로 실행 시 ------")
+
+        var add4Result = add4(10, 5);
+        console.log("두 수의 합 : " + add4Result);
+        var sub4Result = sub4(10, 5);
+        console.log("두 수의 차 : " + sub4Result);
+        var multi4Result = multi4(10, 5);
+        console.log("두 수의 곱 : " + multi4Result);
+        var div4Result = div4(10, 5);
+        console.log("두 수를 나눈 몫 : " + div4Result);
+
+        console.log("\n======= 문제 4 =======\n");
+        // 문제 4) 사용자 입력(숫자)를 받아서 해당 하는 단수의 구구단을
+        // 출력하는 프로그램을 작성하세요
+        // 구구단 부분이 함수로 만들어져야함
+
+        // var a = prompt("단수를 입력하세요.");
+        // var b = 1;
+        function gugu1() {
+            for (a = prompt("단수"); a < 10; a++) {
+                console.log(" ");
+                for (b = 1; b < 10; b++) {
+                    console.log(a + " * " + b + " = " + (a*b));
+                }
+                if (b > 9) {
+                    break;
+                }
+            }
+        }
+        gugu1();
+        
+        console.log("--------------------------2");
+
+        function gugu2(dan) {
+            for (var i = 1; i < 10; i++) {
+                console.log(dan + " * " + i + " = " + (dan * i));
+            }
+        }
+        var dan = prompt(" 단수 ");
+
+        gugu2(dan);
+
+        console.log("\n======= 문제 4 =======\n");
+        // 문제 5) 매개변수를 3개를 받는 함수 하나를 생성하여 입력된 기호에
+        // 따라 사칙연산을 진행하는 프로그램을 작성하세요.
+        // 첫번째, 두번째 매개변수는 계산할 데이터
+        // 세번째 매개변수는 사칙연산을 위한 기호
+
+        // prompt() : 입력되는 모든 데이터를 문자열로 받음
+        // Number(), parseInt() : 문자열 타입의 숫자를 숫자타입으로 변환
+
+        function qq(x, y, z) {
+            var c = 0;
+            switch (z) {
+                case "+":
+                c = x + y;
+                break;
+
+                case "-":
+                c = x - y;
+                break;
+
+                case "*":
+                c = x * y;
+                break;
+
+                case "/":
+                c = x / y;
+                break;
+
+                default:
+                c = "잘못 입력되었습니다."
+                break;
+            }
+            return c;
+        }
+            var x = prompt("숫자를 입력하세요.", "123");
+            var y = prompt("숫자를 입력하세요.", "456");
+            var z = prompt("사칙연산 기호를 선택하세요.", "+-*/");
+
+            x = Number(x);
+            y = Number(y);
+
+            var result = qq(x, y, z);
+            console.log("두 수의 '" + z + "'계산 결과는" + result + "입니다.");
+
+
+
+        console.log("--------------------");
+
+        var num = prompt("숫자를 입력하세요.");
+
+        // isNaN()은 숫자가 아니면 True
+        if (isNaN(num) == true) {
+            // 숫자가 아닐때
+            console.log("숫자가 입력되지 않았습니다.")
+        }
+        else {
+            // 숫자일때
+            num = parseInt(num);
+            // num = Number(num); 위와동일
+            console.log(num * num);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
