@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 2-1</title>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var oct = 015;
+            var hex = 0x15;
+            var condition = true;
+
+            document.write("8진수 015는 십진수로 " + oct + "<br>");
+            document.write("16진수 0x15는 십진수로 " + hex + "<br>");
+            document.write("condition은 " + condition + "<br>");
+            document.write("문자열 : 단일인용부호로도 표현" + "<br>");
+            document.write("그녀는\"누구세요\"라고 했습니다.");
+        });
+
+        // 이스케이프 문자
+        // 문자열 내에서 특정한 문자를 출력하기 위한 문자
+        // 이스케이프 문자는 '\' 기호와 함께 사용함
+        // \b : 백스페이스
+        // \t : 수평 탭 *
+        // \n : 수직 탭
+        // \v : 개행 *
+        // \r : 리턴
+        // \f : 폼 피드
+        // \' : 홑 따옴표 *
+        // \" : 쌍 따옴표 *
+        // \\ : 역 슬래쉬 *
+        // \0 : null 문자
+        // \xXX : Latin-1 문자, 16진수
+        // \uXXXX : Unicode 문자, 16진수
+        // UTF-8, UTF-16, UTF-32
+
+        console.log("sdffsf\b\b\b");
+        console.log("abc\t\tdede\t\t");
+        console.log("faf\nfdsaf\nf\nfd");
+        console.log("\"aba\"bad\"ffasf\"");
+        console.log('"aba"bad"ffasf"');
+        console.log("'fd\'fa\'faf\'ttf'");
+        console.log("'fd'fa'faf'ttf'");
+        console.log("sd\\fs\\df\\fv");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 3-1</title>
+    <script>
+        var fruits = "사과";
+        switch(fruits) {
+            case "바나나":
+            price = 200; break;
+            case "사과":
+            price = 300; break;
+            case "체리":
+            price = 400; break;
+            default:
+            console.log("팔지 않습니다.");
+            price = 0;
+        }
+        console.log(price);
+
+        console.log("--------------");
+
+        fruits = "사과";
+        price = 0;
+
+        if (fruits == "바나나") {
+            price = 200;
+        }
+        else if (fruits == "사과") {
+            price = 300;
+        }
+        else if (fruits == "체리") {
+            price = 400;
+        }
+        else {
+            price = 0;
+            console.log("팔지 않습니다.")
+        }
+        console.log(price);
+
+        console.log("---------------");
+
+        // new Date().getDay(); 오늘 날짜의 요일을 숫자 0~6으로 표현해 줌
+        var day = new Date("2020-12-25").getDay();
+        var toDay = "";
+
+        switch (day) {
+            case 1:
+            toDay = "월요일";
+            break;
+
+            case 2:
+            toDay = "화요일";
+            break;
+
+            case 3:
+            toDay = "수요일";
+            break;
+
+            case 4:
+            toDay = "목요일";
+            break;
+
+            case 5:
+            toDay = "금요일";
+            break;
+
+            default:
+            toDay = "주말";
+            break;
+        }
+        console.log("오늘은 " + toDay + " 입니다.");
+        
+        console.log("------- 문제 -------")
+        // 문제 1) 위의 요일 입력하는 부분을 사용자가 날짜를 입력하면 
+        // 해당하는 요일이 출력되는 프로그램을 작성하세요
+        // else if 문으로 작성하세요
+        // 사용자 입력 방식 "2020-11-17"
+
+        var toDay = prompt("2020-xx-xx");
+        var day = new Date(toDay).getDay();
+        
+
+        if (day == 1) {
+            console.log("월");
+        }
+        else if (day == 2) {
+            console.log("화");
+        }
+        else if (day == 3) {
+            console.log("수");
+        }
+        else if (day == 4) {
+            console.log("목");
+        }
+        else if (day == 5) {
+            console.log("금");
+        }
+        else if (day == 6) {
+            console.log("주말");
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
